@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style12.css">
+</head>
+<body>
+
+
+</style>
+</head>
+<body class="TEXT">
+<div class="wrap">
+  <div class="panel" role="region" aria-label="Student Registration">
+    <h1>STUDENT REGISTRATION FORM</h1>
+
+    <form autocomplete="on" novalidate>
+      <label for="first">FIRST NAME
+        <span class="hint">(max 30 characters a-z and A-Z)</span>
+      </label>
+      <div>
+        <input id="first" name="first" type="text" maxlength="30" placeholder="First name" required />
+      </div>
+
+      <label for="last">LAST NAME
+        <span class="hint">(max 30 characters a-z and A-Z)</span>
+      </label>
+      <div>
+        <input id="last" name="last" type="text" maxlength="30" placeholder="Last name" required />
+      </div>
+
+      <label>DATE OF BIRTH</label>
+      <div class="date-row">
+        <select name="day" aria-label="Day">
+          <option value="">Day</option>
+          <!-- 1..31 -->
+          <script>for(let d=1;d<=31;d++){document.write(<option>${d}</option>);}</script>
+        </select>
+        <select name="month" aria-label="Month">
+          <option value="">Month</option>
+          <option>January</option><option>February</option><option>March</option><option>April</option>
+          <option>May</option><option>June</option><option>July</option><option>August</option>
+          <option>September</option><option>October</option><option>November</option><option>December</option>
+        </select>
+        <select name="year" aria-label="Year">
+          <option value="">Year</option>
+          <!-- 1980..2025 -->
+          <script>for(let y=2025;y>=1950;y--){document.write(<option>${y}</option>);}</script>
+        </select>
+      </div>
+
+      <label for="email">EMAIL ID</label>
+      <div>
+        <input id="email" name="email" type="email" placeholder="you@example.com" />
+      </div>
+
+      <label for="mobile">MOBILE NUMBER</label>
+      <div>
+        <input id="mobile" name="mobile" type="tel" placeholder="10 digit number"
+               pattern="\d{10}" maxlength="10" />
+        <small class="hint"> (10 digit number)</small>
+      </div>
+
+      <label>GENDER</label>
+      <div class="gender-row">
+        <label class="inline-control"><input type="radio" name="gender" value="male" checked/> Male</label>
+        <label class="inline-control"><input type="radio" name="gender" value="female" /> Female</label>
+      </div>
+
+      <label for="address">ADDRESS</label>
+      <div>
+        <textarea id="address" name="address" placeholder="Street, area, landmark..."></textarea>
+      </div>
+
+      <label for="city">CITY</label>
+      <div>
+        <input id="city" name="city" type="text" maxlength="30" placeholder="City name" />
+      </div>
+
+      <label for="pincode">PIN CODE</label>
+      <div>
+        <input id="pincode" name="pincode" type="text" maxlength="6" pattern="\d{6}" placeholder="6 digit number" />
+      </div>
+
+      <label for="state">STATE</label>
+      <div>
+        <input id="state" name="state" type="text" maxlength="30" placeholder="State / Region" />
+      </div>
+
+      <label for="country">COUNTRY</label>
+      <div>
+        <input id="country" name="country" type="text" value="India" />
+      </div>
+
+      <label>HOBBIES</label>
+      <div class="hobbies-row">
+        <label class="inline-control"><input type="checkbox" name="hobby" value="drawing"/> Drawing</label>
+        <label class="inline-control"><input type="checkbox" name="hobby" value="singing"/> Singing</label>
+        <label class="inline-control"><input type="checkbox" name="hobby" value="dancing"/> Dancing</label>
+        <label class="inline-control"><input type="checkbox" name="hobby" value="sketching"/> Sketching</label>
+
+
+</body>
+
+</html>
+<div style="display:flex;align-items:center;gap:8px;">
+          <label class="inline-control"><input type="checkbox" id="other-hobby"/> Others</label>
+          <input type="text" id="other-hobby-text" name="other_hobby" placeholder="If other" style="width:140px;height:28px;"/>
+        </div>
+      </div>
+
+      <div class="qualifications">
+        <strong>QUALIFICATION</strong>
+        <table class="qual-table" aria-describedby="qual-help">
+          <thead>
+            <tr>
+              <th style="width:40px">Sl.No.</th>
+              <th>Examination</th>
+              <th style="width:180px">Board</th>
+              <th style="width:120px">Percentage</th>
+              <th style="width:120px">Year of Passing</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Class X</td>
+              <td><input type="text" name="board_x" maxlength="10" /></td>
+              <td><input type="text" name="perc_x" pattern="^\d+(\.\d{1,2})?$" placeholder="upto 2 decimals" /></td>
+              <td><input type="text" name="year_x" maxlength="4" /></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Class XII</td>
+              <td><input type="text" name="board_xii" maxlength="10" /></td>
+              <td><input type="text" name="perc_xii" pattern="^\d+(\.\d{1,2})?$" /></td>
+              <td><input type="text" name="year_xii" maxlength="4" /></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Graduation</td>
+              <td><input type="text" name="board_grad" maxlength="10" /></td>
+              <td><input type="text" name="perc_grad" pattern="^\d+(\.\d{1,2})?$" /></td>
+              <td><input type="text" name="year_grad" maxlength="4" /></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Masters</td>
+              <td><input type="text" name="board_mast" maxlength="10" /></td>
+              <td><input type="text" name="perc_mast" pattern="^\d+(\.\d{1,2})?$" /></td>
+              <td><input type="text" name="year_mast" maxlength="4" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <label>COURSES APPLIED FOR</label>
+      <div class="courses-row">
+        <label class="inline-control"><input type="radio" name="course" value="BCA" /> BCA</label>
+        <label class="inline-control"><input type="radio" name="course" value="BCom" /> B.Com</label>
+        <label class="inline-control"><input type="radio" name="course" value="BSc" /> B.Sc</label>
+        <label class="inline-control"><input type="radio" name="course" value="BA" /> B.A</label>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="btn-submit">Submit</button>
+        <button type="reset" class="btn-reset">Reset</button>
+      </div>
+    </form>
+
+  </div>
+</div>
+</body>
+</html>
